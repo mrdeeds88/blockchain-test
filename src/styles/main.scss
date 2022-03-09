@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+/// Configuration and helpers
+@import
+  'utils/variables',
+  'utils/functions',
+  'utils/helpers';
+
+/// Vendors
+@import
+  'vendor/mq',
+  'vendor/media-queries',
+  'vendor/animate',
+  'vendor/aos';
+
+/// Components
+@import
+  'components/form',
+  'components/buttons';
+
+/// Page-specific
+@import
+  'pages/animations',
+  'pages/home',
+  'pages/res_home';

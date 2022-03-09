@@ -1,0 +1,16 @@
+stages:
+    - build
+
+build-image:
+    stage: build
+    script:
+      - docker build -t $CI_PROJECT_PATH:${CI_COMMIT_REF_NAME/\//-} .
+      - docker push $CI_PROJECT_PATH:${CI_COMMIT_REF_NAME/\//-}
+    only: 
+      - master
+      - /^feature\/.*/@harbor.seacloud.garenanow.com/$service_project/$service_slug
+      - /^dev\/.*/@harbor.seacloud.garenanow.com/$service_project/$service_slug
+      - merge_requests
+      - tags
+      - web
+

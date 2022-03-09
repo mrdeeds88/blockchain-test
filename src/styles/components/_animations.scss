@@ -1,0 +1,137 @@
+.animate-in {
+  animation-name: page-in;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  z-index: 1;
+}
+.animate-out {
+  animation-name: page-out;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+@keyframes scroll-down {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+}
+@keyframes julia-updown {
+  0%, 100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes left-wing {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes right-wing {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes god-idle {
+  0%, 100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-52%) translateX(0);
+  }
+}
+@keyframes god-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes god-idle-2 {
+  0%, 100% {
+    transform: translateY(-100px) translateX(-10%);
+  }
+  50% {
+    transform: translateY(-120px) translateX(-10%);
+  }
+}
+@keyframes god-left-in {
+  0% {
+    transform: translateY(-20%) translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes god-right-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes page-in {
+  0% {
+    opacity: 0;
+    transform: scale(2, 2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes page-out {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
+}
+.anim {
+  opacity: 0;
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out, margin-top .5s ease;
+}
+.animate-in {
+  .anim {
+    opacity: 1 !important;
+    transform: translateX(0) translateY(0) scale(1) !important;
+    filter: none !important;
+    transition-delay: 0s;
+  }
+  #petal-stage-wrap {
+    opacity: 1 !important;
+  }
+  /*&.section-5 {
+    li img {
+      margin-bottom: 0;
+    }
+  }*/
+}

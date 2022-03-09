@@ -1,0 +1,280 @@
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  font-size: 1.6rem;
+  color: $color-primary;
+  font-family: $roboto;
+  background-color: #000;
+  &.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+    height: 100% !important;
+  }
+}
+img {
+  max-width: 100% !important;
+}
+#root {
+  position: relative;
+  min-height: 100%;
+}
+button {
+  outline: none !important;
+}
+a {
+  color: $yellow;
+  transition: color .25s ease;
+  outline: none !important;
+  &:hover {
+    color: lighten($yellow, 20%);
+    text-decoration: none;
+  }
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.row {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.container {
+  max-width: 100% !important;
+}
+.swal2-shown,
+.ReactModal__Body--open {
+	#root {
+		//filter: blur(5px);
+	}
+}
+.swal2-container.swal2-backdrop-show {
+  background-color: rgba(0,0,0,.8) !important;
+  .swal2-popup {
+    display: flex;
+  }
+}
+.swal2-container {
+  .swal2-popup {
+		height: auto !important;
+    width: 60% !important;
+    min-height: 68vh !important;
+		background: rgb(164, 209, 42);
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 3rem;
+    border-radius: 0 !important;
+    @include min-screen(1200px) {
+      width: 46% !important;
+      min-height: 50vh !important;
+    }
+    &.popup-img {
+      width: 64% !important;
+      background: transparent !important;
+      padding: 0;
+      #swal2-content {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .swal2-actions {
+        bottom: -2rem;
+      }
+    }
+    .swal2-actions {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -3rem;
+    }
+    .swal2-close,
+    .close {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      background: url(#{$cdnUrl}/images/close.png) no-repeat center;
+      background-size: 100%;
+      top: 2rem;
+      right: 0;
+      opacity: 1;
+      font-size: 4rem;
+      outline: none !important;
+      color: #fff !important;
+      font-family: serif;
+      font-weight: 300;
+      z-index: 9;
+      text-indent: -9999px;
+    }
+    #swal2-content {
+      font-size: 2.2rem;
+			margin-bottom: 2rem;
+      margin-top: 3rem;
+      color: #f3e1b9;
+      line-height: 150%;
+      text-transform: uppercase;
+      p {
+        font-size: 2.2rem;
+        color: #fff;
+        line-height: 150%;
+        text-transform: uppercase;
+      }
+    }
+    #swal2-title,
+    h2 {
+      height: 6rem;
+      line-height: 5.5rem;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -1.2rem;
+      border-radius: 3rem;
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      color: #fce54e;
+      font-family: $font-heading;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, .6);
+      min-width: 60%;
+      justify-content: center;
+      span {
+        color: #fce54e;
+        font-family: $font-heading;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, .6);
+      }
+    }
+  }
+}
+.ReactModal__Overlay {
+  display: flex!important;
+  position: fixed!important;
+  top: 0!important;
+  right: 0!important;
+  bottom: 0;
+  left: 0!important;
+  flex-direction: row!important;
+  align-items: center!important;
+  justify-content: center!important;
+  padding: 10px!important;
+  background: rgba(0, 0, 0, .8) !important;
+  z-index: 1060!important;
+  overflow-x: hidden!important;
+  -webkit-overflow-scrolling: touch !important;
+}
+.ReactModal__Content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 0!important;
+  width: 60% !important;
+  height: auto !important;
+  background: transparent;
+  border: 0 !important;
+  padding: 0 !important;
+  text-align: center;
+  outline: none;
+  @include min-screen(1200px) {
+    width: 46% !important;
+  }
+  .modal-description {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.modal-vote {
+    h2 {
+      font-size: 3rem;
+    }
+  }
+  .close {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background: url(#{$cdnUrl}/images/close.png) no-repeat center;
+    background-size: 100%;
+    top: 2rem;
+    right: 0;
+    opacity: 1;
+    font-size: 4rem;
+    outline: none !important;
+    color: #fff !important;
+    font-family: serif;
+    font-weight: 300;
+    z-index: 9;
+    text-indent: -9999px;
+  }
+  h2 {
+    height: 6rem;
+    line-height: 5.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1.2rem;
+    border-radius: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    min-width: 60%;
+    justify-content: center;
+    span {
+      color: #fce54e;
+      font-family: $font-heading;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, .6);
+    }
+  }
+	p,
+	li {
+    font-size: 2rem;
+  }
+  &.modal-prize--3 {
+    p,
+    li {
+      font-size: 1.6rem !important;
+    }
+  }
+}
+#main-body {
+  overflow: hidden;
+  position: relative;
+}
+.ScrollbarsCustom-Wrapper {
+  right: 0 !important;
+}
+.ScrollbarsCustom-Track {
+  width: 3px !important;
+  right: -8px !important;
+  z-index: 1;
+  background: #d4c7ca !important;
+}
+.ScrollbarsCustom-Thumb {
+  background: #2a7135 !important;
+}
+.main-app {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  margin-top: 10vh;
+}
+.nft {
+  position: relative;
+  margin-bottom: 3vh;
+}

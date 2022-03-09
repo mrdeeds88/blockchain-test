@@ -1,0 +1,13 @@
+@include min-screen(1200px) {
+  .swal2-container .swal2-popup .swal2-styled.swal2-cancel, .swal2-container .swal2-popup .swal2-styled.swal2-confirm {
+    width: 16.5rem;
+    font-size: 2rem;
+  }
+  .ScrollbarsCustom {
+    height: 400px !important;
+  }
+}
+@include screen(736px, 1024px) {
+  .main-content {
+  }
+}
